@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MSA reassignment — October 28, 2026</title>
+<script>
+  (function(){var t;try{t=localStorage.getItem('nre-theme')}catch(e){}
+    document.documentElement.setAttribute('data-theme',t||'light');})();
+  function nreToggleTheme(){
+    var r=document.documentElement,t=r.getAttribute('data-theme')==='light'?'dark':'light';
+    r.setAttribute('data-theme',t);try{localStorage.setItem('nre-theme',t)}catch(e){}
+    nreThemeLabel();
+  }
+  function nreThemeLabel(){
+    var b=document.getElementById('theme-btn');if(!b)return;
+    var light=document.documentElement.getAttribute('data-theme')==='light';
+    b.textContent=light?'☾ Dark mode':'☀ Light mode';
+    b.setAttribute('aria-label',light?'Switch to dark mode':'Switch to light mode');
+  }
+  document.addEventListener('DOMContentLoaded',nreThemeLabel);
+</script>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2333; --line:#30363d;
+    --ink:#e6edf3; --dim:#8b949e; --accent:#58a6ff; --accent-dim:rgba(88,166,255,.12);
+    --ok:#56b4e9; --warn:#e69f00;
+    --font:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --mono:ui-monospace, "SF Mono", Menlo, monospace;
+    --radius:10px;
+  }
+  :root[data-theme="light"]{
+    --bg:#ffffff; --panel:#f6f8fa; --panel2:#eef1f5; --line:#c9d1d9;
+    --ink:#1f2328; --dim:#57606a; --accent:#0550ae; --accent-dim:rgba(5,80,174,.10);
+    --ok:#0072b2; --warn:#9a5b00;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:70px}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.6 var(--font)}
+  .topbar{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+  .topbar .in{max-width:860px;margin:0 auto;padding:10px 22px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+  .topbar a{font-size:13px;color:var(--dim);text-decoration:none;padding:4px 9px;border-radius:6px}
+  .topbar a:hover{background:var(--panel2);color:var(--ink)}
+  .topbar .spacer{flex:1}
+  button{font:inherit;cursor:pointer}
+  #theme-btn{font-size:12.5px;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:4px 10px}
+  .wrap{max-width:860px;margin:0 auto;padding:36px 22px 110px}
+  h1{font-size:30px;letter-spacing:-.03em;line-height:1.15;margin:0 0 10px}
+  .lede{font-size:17px;color:var(--dim);margin:0 0 10px}
+  .stamp{font:12px/1.4 var(--mono);color:var(--dim)}
+  h2{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);margin:48px 0 14px;font-weight:700}
+  p{margin:8px 0}
+  .dim{color:var(--dim)}
+  a{color:var(--accent)}
+  code{font-family:var(--mono);font-size:.85em;background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 6px}
+  .callout{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:var(--radius);padding:12px 16px;margin:16px 0}
+  .callout.warn{border-left-color:var(--warn)}
+  .callout.ok{border-left-color:var(--ok)}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:22px 0}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+  .stat b{display:block;font-size:24px;letter-spacing:-.03em}
+  .stat span{display:block;font-size:12.5px;color:var(--dim);margin-top:4px}
+  .tbl{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);margin:12px 0}
+  table{border-collapse:collapse;width:100%;font-size:14px}
+  th,td{text-align:left;padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--panel);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);font-weight:700}
+  tr:last-child td{border-bottom:0}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+  ol.steps{padding-left:1.2em}
+  ol.steps li{margin:8px 0}
+  @media print{.topbar{display:none}}
+</style>
+</head>
+<body>
+
+<nav class="topbar"><div class="in">
+  <a href="#moved">What moved</a>
+  <a href="#how">How</a>
+  <a href="#left">Left alone</a>
+  <a href="#after">After</a>
+  <a href="/">All pages</a>
+  <span class="spacer"></span>
+  <button id="theme-btn" onclick="nreToggleTheme()">☾ Dark mode</button>
+</div></nav>
+
+<main class="wrap">
+
+<header>
+  <h1>MSA reassignment</h1>
+  <p class="lede">On October 28, 2026, Subto Close leads were round-robined off Chris Burrow and Joe Morales, and recent signups with no advisor were included, onto Shemelia Freeman, Daisha Kincade, Mirisa Robles, and Julia Warmus.</p>
+  <p class="stamp">Subto Close · Member Success Advisor field only · one-time update</p>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>1,016</b><span>leads updated</span></div>
+  <div class="stat"><b>254 each</b><span>Shemelia, Daisha, Mirisa, Julia</span></div>
+  <div class="stat"><b>1 field</b><span>Member Success Advisor (MSA)</span></div>
+  <div class="stat"><b>0 skipped</b><span>every lead in the list was written</span></div>
+</div>
+
+<div class="callout ok"><b>Checked after the write.</b> Chris and Joe have no leads left in Live, Paused, Potential Churn, or blank membership status. Nobody marked Signed Up since September 18 still has an empty MSA field.</div>
+
+<h2 id="moved">What moved</h2>
+<p>Two groups were combined into one list. Close spells the first person <b>Chris Burrow</b>. Joe Morales was already deactivated in Close on October 20; his name was still stored on these leads.</p>
+
+<h3>Chris and Joe, still in an MSA relationship — 803</h3>
+<p>Every lead whose Member Success Advisor was Chris or Joe, except membership status <b>MSA Program Completed</b> and <b>Churned</b>.</p>
+<div class="tbl"><table>
+  <tr><th>Was assigned to</th><th class="num">Leads</th><th>Membership status</th></tr>
+  <tr><td>Chris Burrow</td><td class="num">435</td><td>422 Live, 6 Paused, 2 Potential Churn, 5 blank</td></tr>
+  <tr><td>Joe Morales</td><td class="num">368</td><td>363 Live, 3 Paused, 2 blank</td></tr>
+  <tr><td><b>Total</b></td><td class="num"><b>803</b></td><td></td></tr>
+</table></div>
+
+<h3>Signed Up since September 18, MSA empty — 213</h3>
+<p>Leads whose status changed <b>to Signed Up</b> on or after September 18, 2026, and whose Member Success Advisor field was empty. This includes people who have since left Signed Up, and people whose membership is already marked completed.</p>
+<div class="tbl"><table>
+  <tr><th>Lead status now</th><th>Membership status</th><th class="num">Leads</th></tr>
+  <tr><td>Signed Up</td><td>blank</td><td class="num">182</td></tr>
+  <tr><td>Signed Up</td><td>Live</td><td class="num">7</td></tr>
+  <tr><td>Signed Up</td><td>MSA Program Completed</td><td class="num">7</td></tr>
+  <tr><td>Potential Opportunity</td><td>blank</td><td class="num">4</td></tr>
+  <tr><td>Delinquent</td><td>blank</td><td class="num">2</td></tr>
+  <tr><td>Delinquent</td><td>MSA Program Completed</td><td class="num">1</td></tr>
+  <tr><td>Paused Account</td><td>blank</td><td class="num">2</td></tr>
+  <tr><td>Paused Account</td><td>MSA Program Completed</td><td class="num">1</td></tr>
+  <tr><td>DNC</td><td>blank</td><td class="num">2</td></tr>
+  <tr><td>Ended Account</td><td>blank</td><td class="num">1</td></tr>
+  <tr><td>Ended Account</td><td>MSA Program Completed</td><td class="num">1</td></tr>
+  <tr><td>New Lead</td><td>blank</td><td class="num">1</td></tr>
+  <tr><td>Pending Deal</td><td>blank</td><td class="num">1</td></tr>
+  <tr><td>Cold</td><td>blank</td><td class="num">1</td></tr>
+  <tr><td><b>Total</b></td><td></td><td class="num"><b>213</b></td></tr>
+</table></div>
+
+<h2 id="how">How they were assigned</h2>
+<ol class="steps">
+  <li>Pulled the 803 Chris and Joe leads and the 213 recent signups with an empty MSA field.</li>
+  <li>Sorted the combined 1,016 leads by Close lead id, so the order is stable and not based on name, book size, or who had them before.</li>
+  <li>Walked that list in order and assigned <b>Shemelia Freeman, Daisha Kincade, Mirisa Robles, Julia Warmus</b>, then repeated. 1,016 divides by 4, so each person received 254.</li>
+  <li>Wrote only the <b>Member Success Advisor (MSA)</b> user field on the lead. Before each write, the lead was read again. A Chris or Joe lead was skipped if it was no longer theirs. An empty lead was skipped if someone had already been assigned. None of those happened.</li>
+</ol>
+<div class="callout warn"><b>This evens this batch only.</b> It does not balance the books they already had. Mirisa’s existing book was already the largest, so her full book is still the largest after adding 254.</div>
+<p class="dim">“Empty” means the field was blank at the time of the update. Close search cannot show an advisor who was set and later cleared, so a lead in that situation would have been included with the 213.</p>
+
+<h2 id="left">What was not changed</h2>
+<div class="tbl"><table>
+  <tr><th>Left as it was</th><th>Why</th></tr>
+  <tr><td>Chris Burrow’s 319 completed leads</td><td>Membership status is MSA Program Completed</td></tr>
+  <tr><td>Joe Morales’s 507 completed leads and 1 churned lead</td><td>Same rule: completed and churned stayed with them</td></tr>
+  <tr><td>Lead owner</td><td>Only the MSA field was updated</td></tr>
+  <tr><td>Membership status, week, and program dates</td><td>Not part of this reassignment</td></tr>
+  <tr><td>The older text field named Member Success Advisor, and Member Success Advisor Assigned</td><td>Those are not the live MSA book. None of the 803 Chris/Joe leads were using the second user field</td></tr>
+  <tr><td>A Community: MSA Transferred activity</td><td>Not logged. That activity type is not what other automations listen to</td></tr>
+  <tr><td>Zapier zaps and n8n workflows</td><td>This was a one-time field update. Future new members still follow whatever assignment automation is already on</td></tr>
+  <tr><td>Live leads with an empty MSA who signed up before September 18</td><td>Outside the 40-day window. About 83 Signed Up + Live leads in that older group were left unassigned</td></tr>
+</table></div>
+
+<h2 id="after">Books after the update</h2>
+<p>These are everyone on the Member Success Advisor field now, including members each person already had, plus the 254 from this batch.</p>
+<div class="tbl"><table>
+  <tr><th>Member Success Advisor</th><th class="num">Leads on the field now</th><th class="num">From this batch</th></tr>
+  <tr><td>Shemelia Freeman</td><td class="num">468</td><td class="num">254</td></tr>
+  <tr><td>Daisha Kincade</td><td class="num">608</td><td class="num">254</td></tr>
+  <tr><td>Mirisa Robles</td><td class="num">881</td><td class="num">254</td></tr>
+  <tr><td>Julia Warmus</td><td class="num">460</td><td class="num">254</td></tr>
+  <tr><td>Chris Burrow</td><td class="num">319</td><td class="num">0 — completed only</td></tr>
+  <tr><td>Joe Morales</td><td class="num">508</td><td class="num">0 — 507 completed, 1 churned</td></tr>
+</table></div>
+
+</main>
+</body>
+</html>
