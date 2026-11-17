@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opt-outs to 76819</title>
+<script>
+  (function () {
+    var t;
+    try { t = localStorage.getItem("nre-theme"); } catch (e) {}
+    document.documentElement.setAttribute("data-theme", t || "light");
+  })();
+  function nreToggleTheme() {
+    var r = document.documentElement;
+    var t = r.getAttribute("data-theme") === "light" ? "dark" : "light";
+    r.setAttribute("data-theme", t);
+    try { localStorage.setItem("nre-theme", t); } catch (e) {}
+    nreThemeLabel();
+  }
+  function nreThemeLabel() {
+    var b = document.getElementById("theme-btn");
+    if (!b) return;
+    var light = document.documentElement.getAttribute("data-theme") === "light";
+    b.textContent = light ? "Dark mode" : "Light mode";
+    b.setAttribute("aria-label", light ? "Switch to dark mode" : "Switch to light mode");
+  }
+  document.addEventListener("DOMContentLoaded", nreThemeLabel);
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#stats">Skip to the numbers</a>
+<header class="top">
+  <div class="top-in">
+    <div>
+      <p class="eyebrow">New Reach · Subto SMS</p>
+      <h1>Opt-outs to 76819</h1>
+    </div>
+    <button type="button" id="theme-btn" class="ghost" onclick="nreToggleTheme()">Dark mode</button>
+  </div>
+  <p class="lede">STOP-style replies to shortcode 76819 during the afternoon send window, and the text that went out to that person immediately before the reply.</p>
+  <p class="stamp">November 13–16, 2026 · 1:40–11:59pm Mountain time · pulled November 17</p>
+</header>
+
+<main class="wrap">
+  <div class="filters" id="filters"></div>
+  <p class="active" id="active" hidden></p>
+
+  <section class="stats" id="stats" aria-live="polite"></section>
+
+  <p class="callout">These are reply counts, not opt-out rates. A text that reached more people can show a higher count at the same rate. Phone numbers are not on this page.</p>
+
+  <div class="split">
+    <section class="card" aria-labelledby="hours-label">
+      <div class="card-head">
+        <h2 id="hours-label">When the reply arrived</h2>
+        <p>Mountain time. Select an hour to narrow the page.</p>
+      </div>
+      <div class="hours" id="hours"></div>
+    </section>
+    <section class="card" aria-labelledby="lag-label">
+      <div class="card-head">
+        <h2 id="lag-label">How soon after the text</h2>
+        <p>Minutes from the prior 76819 message to the reply.</p>
+      </div>
+      <div id="lag"></div>
+    </section>
+  </div>
+
+  <section class="card" aria-labelledby="heat-label">
+    <div class="card-head">
+      <h2 id="heat-label">Day by hour</h2>
+      <p>Darker cells are more replies. Select a cell to filter to that day and hour.</p>
+    </div>
+    <div id="heat"></div>
+  </section>
+
+  <section class="card" aria-labelledby="kw-label">
+    <div class="card-head">
+      <h2 id="kw-label">What they sent back</h2>
+      <p>Grouped keyword. Longer personal replies are counted under the phrase they used, and the rest of the text stays off this page.</p>
+    </div>
+    <div class="chips" id="keywords"></div>
+  </section>
+
+  <section class="card" aria-labelledby="tmpl-label">
+    <div class="card-head">
+      <h2 id="tmpl-label">The text just before the reply</h2>
+      <p>The latest outbound from 76819 to that number before the opt-out. Select one to see only the replies that followed it.</p>
+    </div>
+    <div id="templates"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Source: Subto Twilio message log for shortcode 76819, inbound replies from 1:40pm through 11:59pm Mountain time on November 13, 14, 15, and 16, 2026. Two replies had no outbound from 76819 earlier in that range.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
